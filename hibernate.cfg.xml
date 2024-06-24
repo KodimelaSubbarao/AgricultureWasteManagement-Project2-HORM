@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        
+         <property name="hibernate.connection.password">Subbu@123</property>
+         <property name="hibernate.connection.url">jdbc:mysql:///subbu</property>
+         <property name="hibernate.connection.username">root</property>
+         
+            <!-- Specify Hibernate dialect -->
+ 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  		<property name="hibernate.hbm2ddl.auto">update</property>
+  		<property name="show_sql">true</property>
+                
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        
+        <!-- Mapping files -->
+        <mapping class="com.voidmain.pojo.User" resource="com/voidmain/pojo/User.hbm.xml"/>
+   		<mapping class="com.voidmain.pojo.Product" resource="com/voidmain/pojo/Product.hbm.xml"/>
+    	<mapping class="com.voidmain.pojo.Request" resource="com/voidmain/pojo/Request.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>
